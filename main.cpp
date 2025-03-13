@@ -11,5 +11,7 @@ int main() {
     RegularUser MyUser("Maor", playlist);
     MyUser.playSong();
     MyUser.playSong();
+    MyUser.playSong();
+    MyUser.playSong();
     return 0;
 }

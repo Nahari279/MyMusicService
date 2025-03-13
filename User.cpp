@@ -12,7 +12,7 @@ void User::playSong(){
         cout<<"Playlist is empty."<< endl;
 		return;
     }
-    if (currentSong == playlist.size()-1) 
+    if (currentSong == playlist.size()) 
     {
         currentSong=0;
         cout<<"Replay."<<endl;
