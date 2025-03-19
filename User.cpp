@@ -24,3 +24,7 @@ void User::playSong(){
     currentSong++;
     return;
 }
+
+string User::getName(){
+    return username;
+}

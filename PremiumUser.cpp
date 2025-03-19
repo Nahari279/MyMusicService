@@ -1,4 +1,6 @@
 #include "PremiumUser.h"
+#include <algorithm> 
+#include <random>    
 using namespace std;
 #pragma warning (disable: 4996)
 
@@ -11,5 +13,12 @@ void PremiumUser::mySubscription(){
 
 void PremiumUser::playSong(){
     User::playSong();
+    return;
+}
+
+void PremiumUser::shuffle(){
+    random_device rd;
+    mt19937 g(rd());
+    std::shuffle(playlist.begin(), playlist.end(), g);
     return;
 }

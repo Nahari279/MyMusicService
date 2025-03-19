@@ -13,6 +13,7 @@ public:
     PremiumUser(const string& username, const vector<string>& playlist);
     virtual void mySubscription() override; //override check for existence of virtual function with the same name in the base class.
     virtual void playSong() override; 
+    void shuffle();
 };
 
 #endif //__PREMIUMUSER_H
