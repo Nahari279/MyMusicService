@@ -8,13 +8,16 @@
 using namespace std;
 
 int main() {
-    vector <string> playlist = {"Song A", "Song B", "Song C"};
-    RegularUser reg("Maor", playlist);
-    PremiumUser prim("Maor", playlist);
-    prim.mySubscription();
-    cout<<prim.getName()<<endl;
-    prim.shuffle();
-    prim.playSong();
-    prim.playSong();
+    vector <string> playlist = {"Song A", "Song B", "Song C","Song D","Song E"};
+    RegularUser reg ("Maor", playlist);
+    PremiumUser prim ("Maor", playlist);
+    prim.CurrentSong();
+    prim.NextSong();
+    prim.CurrentSong();
+    prim.SwitchShuffleMode();
+    prim.CurrentSong();
+    prim.NextSong();
+    prim.CurrentSong();
+
     return 0;
 }

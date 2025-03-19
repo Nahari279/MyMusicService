@@ -9,11 +9,15 @@ using namespace std;
 
 class PremiumUser : public User
 {
-public:
-    PremiumUser(const string& username, const vector<string>& playlist);
-    virtual void mySubscription() override; //override check for existence of virtual function with the same name in the base class.
-    virtual void playSong() override; 
+private:
+    bool IsShuffleOn;
     void shuffle();
+public:
+    PremiumUser(const string& username, const vector<string>& NewPlaylist);
+    bool MySubscription() override; //override check for existence of virtual function with the same name in the base class.
+    void NextSong() override;
+	void PreviousSong() override;
+    void SwitchShuffleMode ();
 };
 
 #endif //__PREMIUMUSER_H

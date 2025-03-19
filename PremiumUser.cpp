@@ -4,16 +4,37 @@
 using namespace std;
 #pragma warning (disable: 4996)
 
-PremiumUser::PremiumUser(const string& username, const vector<string>& playlist) : User(username, playlist) {}; //Constractor, using User constractor
+PremiumUser::PremiumUser(const string& username, const vector<string>& NewPlaylist) : User(username, NewPlaylist) { //Constractor, using User constractor
+    IsShuffleOn = false;
+} 
 
-void PremiumUser::mySubscription(){
+bool PremiumUser::MySubscription() {
     cout<<"Premium User"<<endl;
+    return true;
+}
+
+void PremiumUser::NextSong(){
+    if (IsShuffleOn)
+    {
+        PremiumUser::SwitchShuffleMode();
+        PremiumUser::shuffle();
+    }
+    User::NextSong();
     return;
 }
 
-void PremiumUser::playSong(){
-    User::playSong();
+void PremiumUser::PreviousSong(){
+    if (IsShuffleOn)
+    {
+        PremiumUser::SwitchShuffleMode();
+        PremiumUser::shuffle();
+    }
+    User::PreviousSong();
     return;
+}
+
+void PremiumUser::SwitchShuffleMode (){
+    IsShuffleOn = IsShuffleOn ^ 1; //XOR with 1 is switch
 }
 
 void PremiumUser::shuffle(){

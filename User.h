@@ -13,11 +13,14 @@ protected:
 	vector <string> playlist;
 	int currentSong;
 public:
-	User(const string& username, const vector <string>& playlist); //Constractor
+	User(const string& username, const vector <string>& NewPlaylist); //Constractor
 	virtual ~User() = default; // Destructor - MUST! (for polymorphisem - delete derived classes)
-	virtual void mySubscription() = 0; // Pure Virtual Function. Forces derived classes to implement it.
-	virtual void playSong();
-	string getName();
+	virtual bool MySubscription() = 0; // Pure Virtual Function. Forces derived classes to implement it.
+	virtual void CurrentSong ();
+	virtual void NextSong();
+	virtual void PreviousSong();
+	string GetName();
+	vector <string> GetPlaylist();
 };
 
 #endif //__USER_H

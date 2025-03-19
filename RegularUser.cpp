@@ -2,15 +2,21 @@
 using namespace std;
 #pragma warning (disable: 4996)
 
-RegularUser::RegularUser(const string& username, const vector <string>& playlist) : User(username, playlist) {} //Constractor, using User constractor
+RegularUser::RegularUser(const string& username, const vector <string>& NewPlaylist) : User(username, NewPlaylist) {} //Constractor, using User constractor
 
-void RegularUser::mySubscription(){
+bool RegularUser::MySubscription(){
     cout<<"Free user"<<endl;
+    return false;
+}
+
+void RegularUser::NextSong(){
+    cout<<"[Advertisement] Buy Premium for an ad-free experience!"<<endl;
+    User::NextSong();
     return;
 }
 
-void RegularUser::playSong(){
+void RegularUser::PreviousSong(){
     cout<<"[Advertisement] Buy Premium for an ad-free experience!"<<endl;
-    User::playSong();
+    User::PreviousSong();
     return;
 }
