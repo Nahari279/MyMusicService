@@ -4,6 +4,7 @@ using namespace std;
 
 User::User(const string& username, const vector <string>& playlist) : username(username), playlist(playlist) { //Constractor
 	this->currentSong = 0;
+    return;
 }
 
 void User::playSong(){
@@ -21,4 +22,5 @@ void User::playSong(){
     }
 	cout<<"Current song: "<<playlist[currentSong]<<endl;
     currentSong++;
+    return;
 }

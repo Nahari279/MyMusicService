@@ -15,6 +15,7 @@ protected:
 public:
 	User(const string& username, const vector <string>& playlist); //Constractor
 	virtual ~User() = default; // Destructor - MUST! (for polymorphisem)
+	virtual void mySubscription() = 0; // Pure Virtual Function. Forces derived classes to implement it.
 	virtual void playSong();
 };
 

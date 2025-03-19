@@ -10,6 +10,7 @@
                 "main.cpp",
                 "RegularUser.cpp", 
                 "User.cpp",
+                "PremiumUser.cpp",
                 "-o",
                 "program.exe"
             ],
