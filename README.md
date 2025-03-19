@@ -1,7 +1,7 @@
 
 # 🎵 MyMusicService - C++ Music Player
 
-🚀 C++-based music player built on the principles of OOP and polymorphism.
+🚀 C++-based music player built on the principles of OOP.
 
 # 📌 Main Features:
 - ✅ Supports both Regular and Premium users.
