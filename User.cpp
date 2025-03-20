@@ -13,8 +13,9 @@ User::User(const string& username, const vector <string>& NewPlaylist) : usernam
 }
 
 
-void User::CurrentSong (){
+int User::GetCurrentSong (){
     cout<<"Current song: "<<playlist[currentSong]<<endl;
+    return currentSong;
 }
 
 void User::NextSong(){

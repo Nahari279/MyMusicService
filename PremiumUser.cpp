@@ -43,3 +43,7 @@ void PremiumUser::shuffle(){
     std::shuffle(playlist.begin(), playlist.end(), g);
     return;
 }
+
+bool PremiumUser::GetShuffleMode(){
+    return IsShuffleOn;
+}

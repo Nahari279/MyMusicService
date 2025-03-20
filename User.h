@@ -16,7 +16,7 @@ public:
 	User(const string& username, const vector <string>& NewPlaylist); //Constractor
 	virtual ~User() = default; // Destructor - MUST! (for polymorphisem - delete derived classes)
 	virtual bool MySubscription() = 0; // Pure Virtual Function. Forces derived classes to implement it.
-	virtual void CurrentSong ();
+	virtual int GetCurrentSong ();
 	virtual void NextSong();
 	virtual void PreviousSong();
 	string GetName();

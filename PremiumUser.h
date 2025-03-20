@@ -18,6 +18,7 @@ public:
     void NextSong() override;
 	void PreviousSong() override;
     void SwitchShuffleMode ();
+    bool GetShuffleMode();
 };
 
 #endif //__PREMIUMUSER_H
