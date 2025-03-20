@@ -2,6 +2,15 @@
 using namespace std;
 #pragma warning (disable: 4996)
 
+template <typename T>
+void printVector(const vector<T>& vec) {
+    for (const T& item : vec) {
+        cout << item << " ";
+    }
+    cout << endl;
+}
+
+
 User::User(const string& username, const vector <string>& NewPlaylist) : username(username){ //Constractor
 	if (NewPlaylist.empty())
     {
@@ -14,7 +23,6 @@ User::User(const string& username, const vector <string>& NewPlaylist) : usernam
 
 
 int User::GetCurrentSong (){
-    cout<<"Current song: "<<playlist[currentSong]<<endl;
     return currentSong;
 }
 
@@ -45,3 +53,20 @@ string User::GetName(){
 vector <string> User:: GetPlaylist(){
     return playlist;
 }
+
+
+ostream& operator<< (ostream& os, const User& user){
+    os << "User Name: "<<user.username <<endl;
+    os<<"Playlist: ";
+    printVector(user.playlist);
+    os<<"Current song: "<<user.playlist[user.currentSong]<<endl;
+    return os;
+}
+
+ostream& operator<<(ostream& os, const User* user){
+    os << *(user);
+    return os;
+}
+
+
+

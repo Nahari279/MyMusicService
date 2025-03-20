@@ -14,6 +14,7 @@ private:
     void shuffle();
 public:
     PremiumUser(const string& username, const vector<string>& NewPlaylist);
+    
     bool MySubscription() override; //override check for existence of virtual function with the same name in the base class.
     void NextSong() override;
 	void PreviousSong() override;

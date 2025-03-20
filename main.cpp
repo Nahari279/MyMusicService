@@ -30,7 +30,7 @@ int main() {
     prim.NextSong();
     prim.GetCurrentSong();
     CurrentPlaylist = prim.GetPlaylist();
-    printVector(CurrentPlaylist);
+    cout<<prim;
 
     return 0;
 }

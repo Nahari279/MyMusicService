@@ -11,7 +11,8 @@ class RegularUser: public User
 {
 public:
     RegularUser(const string& username, const vector <string>& NewPlaylist); //Contractor, No need for Destructor because we don't have new field or want to use polymorphisem for this class.
-	bool MySubscription() override; //override check for existence of virtual function with the same name in the base class.
+	
+    bool MySubscription() override; //override check for existence of virtual function with the same name in the base class.
     void NextSong() override;
 	void PreviousSong() override;
 };
