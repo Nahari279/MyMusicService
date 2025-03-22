@@ -22,7 +22,8 @@ public:
 
     void AddUser(const string& username, const vector <string>& NewPlaylist, const bool& IsPremium);
     void ShowUser(int UserNumber);
-
+    void ShuffleOn(int UserNumber);
+    void NextSong(int UserNumber);
 };
 
 #endif //__MUSICSERVICE_H

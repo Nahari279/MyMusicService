@@ -11,6 +11,7 @@
                 "RegularUser.cpp", 
                 "User.cpp",
                 "PremiumUser.cpp",
+                "MusicService.cpp",
                 "-o",
                 "program.exe"
             ],

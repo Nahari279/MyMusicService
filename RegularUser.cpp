@@ -12,6 +12,7 @@ bool RegularUser::MySubscription(){
 void RegularUser::NextSong(){
     cout<<"[Advertisement] Buy Premium for an ad-free experience!"<<endl;
     User::NextSong();
+    cout<<"Current song: "<<playlist[currentSong]<<endl;
     return;
 }
 
