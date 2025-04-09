@@ -22,6 +22,7 @@ public:
 
     void AddUser(const string& username, const vector <string>& NewPlaylist, const bool& IsPremium);
     void ShowUser(int UserNumber);
+    void ShowAllUsers();
     void ShuffleOn(int UserNumber);
     void NextSong(int UserNumber);
 };

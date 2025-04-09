@@ -28,8 +28,10 @@ void MusicService::AddUser(const string& username, const vector <string>& NewPla
 }
 
 void MusicService::ShowUser(int UserNumber){
+    UserNumber-=1;
     try
     {
+        cout<<UserNumber+1<<endl;
         cout<<users.at(UserNumber);
     }
     catch (const out_of_range& e)
@@ -43,7 +45,17 @@ void MusicService::ShowUser(int UserNumber){
     return;
 }
 
+void MusicService::ShowAllUsers(){
+    for(int i=0; i<users.size(); i++)
+    {
+        MusicService::ShowUser(i+1);
+        cout<<endl;
+    }
+    return;
+}
+
 void MusicService::ShuffleOn(int UserNumber){
+    UserNumber-=1;
     try
     {
         PremiumUser* prim = dynamic_cast<PremiumUser*>(users.at(UserNumber)); 
@@ -76,12 +88,14 @@ void MusicService::ShuffleOn(int UserNumber){
 }
 
 void MusicService::NextSong(int UserNumber){
+    UserNumber-=1;
     try
     {
         PremiumUser* prim = dynamic_cast<PremiumUser*>(users.at(UserNumber));
         if (prim)
         {
             prim->NextSong();
+            MusicService::ShowUser(UserNumber);
             return;
         }
         else
@@ -90,6 +104,7 @@ void MusicService::NextSong(int UserNumber){
             if(reg)
             {
                 reg->NextSong();
+                MusicService::ShowUser(UserNumber);
             }
             return;
         }

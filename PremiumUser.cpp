@@ -20,7 +20,6 @@ void PremiumUser::NextSong(){
         PremiumUser::shuffle();
     }
     User::NextSong();
-    cout<<"Current song: "<<playlist[currentSong]<<endl;
     return;
 }
 

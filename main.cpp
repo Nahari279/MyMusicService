@@ -21,11 +21,6 @@ int main() {
     vector <string> playlist = {"Song A", "Song B", "Song C","Song D","Song E"};
     MusicService Naharis ("Naharis");
     Naharis.AddUser("Maor",playlist,true);
-    Naharis.ShowUser(0);
     Naharis.AddUser("Shirel",playlist,false);
-    Naharis.ShowUser(1);
-    Naharis.ShuffleOn(0);
-    Naharis.NextSong(0);
-    Naharis.ShowUser(0);
-    Naharis.NextSong(1);
+    Naharis.ShowAllUsers();
 }
